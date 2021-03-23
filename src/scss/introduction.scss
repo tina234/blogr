@@ -1,3 +1,5 @@
+$Dark-blue: hsl(208, 49%, 24%);
+
 
 .intro-cont {
     margin: 115px 0;
@@ -6,11 +8,13 @@
         margin-bottom: 25px;
         text-align: center;
         font-size: 33px;
+        color: $Dark-blue;
     }
 
     .intro-png {
         display: flex;
         align-items: center;
+        flex-wrap: wrap-reverse;
     
         .intro-box {
             flex-basis: 450px;
@@ -27,7 +31,7 @@
                 line-height: 24px;
     
                 h3 {
-                    color: #000;
+                    color: $Dark-blue;
                 }
     
                 p {
@@ -43,11 +47,12 @@
             height: 500px;
 
             img {
-                position: absolute;
-                top: -50%;
-                right: -25px;
+                position: relative;
+                top: 50%;
+                left: 50%;
                 width: 100%;
-                transform: translateY(15%);
+                transform: translate(-25%, -50%);
+                z-index: -1;
             }
         }
     }

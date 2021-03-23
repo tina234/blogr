@@ -2,14 +2,13 @@ $Light-gray: hsl(0, 0%, 100%);
 $light-red: hsl(356, 100%, 66%);
 
 
-
-
 body {
     padding: 0;
     margin: 0;
     font-size: 16px;
     font-family: 'Ubuntu', sans-serif;
     overflow-x: hidden;
+    box-sizing: border-box;
 }
 
 .header-cont {

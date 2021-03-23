@@ -1,0 +1,55 @@
+$State-blue: hsl(237, 23%, 32%);
+$White-text: hsl(0, 0%, 100%);
+$light-gray: #f2f2f2;
+
+
+.state-cont {
+    margin: 250px 0 50px 0;
+    height: 400px;
+    border-top-right-radius: 150px;
+    border-bottom-left-radius: 150px;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    background: rgb(39,40,63);
+    background: linear-gradient(90deg, rgba(39,40,63,1) 27%, rgba(63,65,100,1) 100%);
+
+    .circle-box {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        height: 100%;
+        overflow: hidden;
+
+        img {
+            transform: translateY(-525px);
+        }
+    }
+
+    .state-box {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        max-width: 1400px;
+        width: 100%;
+        z-index: 1;
+        
+        .state-img-box {
+            
+        }
+
+        .text-box {
+            max-width: 500px;
+            line-height: 25px;
+
+            h2 {
+                font-size: 32px;
+                color:hsl(0, 0%, 100%);
+                margin: 30px 0;
+            }
+            p {
+                color: $light-gray;
+            }
+        }
+    }
+}
