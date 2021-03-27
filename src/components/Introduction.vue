@@ -16,8 +16,7 @@
                 <img src="../assets/illustration-editor-desktop.png" alt="">
             </div>
         </div>
-    </div>
-        
+    </div>     
 </template>
 
 <script>

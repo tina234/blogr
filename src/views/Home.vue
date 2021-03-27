@@ -4,6 +4,7 @@
 		<Introduction/>
 		<State/>
 		<DesktopMode/>
+		<Footer/>
 	</div>
 </template>
 
@@ -13,6 +14,7 @@ import Header from "@/components/Header.vue";
 import Introduction from "@/components/Introduction.vue";
 import State from "@/components/State.vue";
 import DesktopMode from "@/components/Desktop-mode.vue";
+import Footer from "@/components/Footer.vue";
 
 	export default {
 		components: {
@@ -20,6 +22,7 @@ import DesktopMode from "@/components/Desktop-mode.vue";
 			Introduction,
 			State,
 			DesktopMode,
+			Footer
 		}
 	}
 </script>

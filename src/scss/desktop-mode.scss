@@ -1,0 +1,54 @@
+$Dark-blue: hsl(208, 49%, 24%);
+
+
+.desk-mode-cont {
+    margin: 250px 0;
+
+    .desk-mode-png {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+
+           
+        .desk-img-box {
+            flex-basis: 450px;
+            flex-grow: 1;
+            position: relative;
+            height: 500px;
+
+            img {
+                position: relative;
+                top: 50%;
+                right: 50%;
+                width: 125%;
+                transform: translate(12%, -50%);
+                z-index: -1;
+            }
+        }
+    
+        .desk-text-box {
+            flex-basis: 450px;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            padding: 10px 20px;
+            
+    
+            div {
+                max-width: 600px;
+                width: 100%;
+                line-height: 28px;
+                margin-bottom: 30px;
+    
+                h3 {
+                    color: $Dark-blue;
+                }
+    
+                p {
+                    color: #555;
+                }
+            }
+        }
+    }
+}
+

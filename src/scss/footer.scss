@@ -1,0 +1,32 @@
+.footer-cont {
+    background-color: hsl(240, 10%, 16%);
+    border-top-right-radius: 150px;
+
+    .footer-box {
+        max-width: 1200px;
+        width: 100%;
+        margin: 0 auto;
+        padding: 100px 50px;
+        display: flex;
+        justify-content: space-between;
+
+        h2 {
+            padding: 0 20px;
+            margin: 0px;
+            color: #fff;
+            font-size: 40px;
+        }
+
+        > div {
+
+            h3 {
+                color: #fff;
+            }
+
+            p {
+                color: #b3b3b3;
+     
+            }
+        }
+    }
+}

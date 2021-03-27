@@ -2,7 +2,7 @@ $Dark-blue: hsl(208, 49%, 24%);
 
 
 .intro-cont {
-    margin: 115px 0;
+    margin: 150px 0;
 
     h2 {
         margin-bottom: 25px;
@@ -21,14 +21,15 @@ $Dark-blue: hsl(208, 49%, 24%);
             flex-grow: 1;
             display: flex;
             flex-direction: column;
-            align-items: center;
+            align-items: flex-end;
             padding: 10px 20px;
             
     
             div {
-                max-width: 500px;
+                max-width: 600px;
                 width: 100%;
-                line-height: 24px;
+                line-height: 28px;
+                margin-bottom: 30px;
     
                 h3 {
                     color: $Dark-blue;
@@ -41,7 +42,7 @@ $Dark-blue: hsl(208, 49%, 24%);
         }
         
         .png-box {
-            flex-basis: 350px;
+            flex-basis: 450px;
             flex-grow: 1;
             position: relative;
             height: 500px;
@@ -50,7 +51,7 @@ $Dark-blue: hsl(208, 49%, 24%);
                 position: relative;
                 top: 50%;
                 left: 50%;
-                width: 100%;
+                width: 120%;
                 transform: translate(-25%, -50%);
                 z-index: -1;
             }
