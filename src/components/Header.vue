@@ -5,9 +5,40 @@
             <h2>Blogr</h2>
             <div class="navbar-items">
                 <div class="nav-left">
-                    <p>Product</p>
-                    <p>Company</p>
-                    <p>Connect</p>
+                    <div class="menu-item">
+                        <span>Product</span>
+                        <i class="fa fa-caret-down" aria-hidden="true"></i>
+
+                        <div class="dropdown-list">
+                            <div class="drop-item">Overview</div>
+                            <div class="drop-item">Marketplace</div>
+                            <div class="drop-item">Pricing</div>
+                            <div class="drop-item">Freatures</div>
+                        </div>
+                    </div>
+                    
+                    <div class="menu-item">
+                        <span>Company</span>
+                        <i class="fa fa-caret-down" aria-hidden="true"></i>
+
+                        <div class="dropdown-list">
+                            <div class="drop-item">Overview</div>
+                            <div class="drop-item">Marketplace</div>
+                            <div class="drop-item">Pricing</div>
+                            <div class="drop-item">Freatures</div>
+                        </div>
+                    </div>
+                    <div class="menu-item">
+                        <span>Connect</span>
+                        <i class="fa fa-caret-down" aria-hidden="true"></i>
+
+                        <div class="dropdown-list">
+                            <div class="drop-item">Overview</div>
+                            <div class="drop-item">Marketplace</div>
+                            <div class="drop-item">Pricing</div>
+                            <div class="drop-item">Freatures</div>
+                        </div>
+                    </div>
                 </div>
                 <div class="nav-right">
                     <p>Login</p>
