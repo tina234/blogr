@@ -77,22 +77,27 @@ $light-gray: #f2f2f2;
 }
 
  @media only screen and (max-width: 899px) {
+    .state-cont {
+        padding: 0 20px;
+        margin: 200px 0 50px 0;
 
-        .state-cont {
-            padding: 0 20px;
-            margin: 200px 0 50px 0;
-
-            .state-img-box {
-                img {
-                    width: 70%;
-                }
+        .state-img-box {
+            img {
+                width: 70%;
             }
+        }
             
-            .text-box {
-                text-align: center;
-                padding: 0px 20px 60px 20px;
-            }
-        }     
+        .text-box {
+            text-align: center;
+            padding: 0px 20px 60px 20px;
+        }
+    }     
+}
+
+@media only screen and (max-width: 500px) {
+    .state-cont {
+        margin: 120px 0 50px 0;
+    }
 }
 
 

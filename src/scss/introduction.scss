@@ -72,7 +72,23 @@ $Dark-blue: hsl(208, 49%, 24%);
         margin-top: 100px;
         align-items: center !important;
     }
+}
 
+@media only screen and (max-width: 500px) {
+    .intro-cont {
+        h2 {
+            padding: 0 20px;
+            margin-bottom: 0;
+        }
+
+        .intro-box {
+            margin-top: 0;
+        }
+
+        .png-box {
+            height: 450px;
+        }
+    }
 }
 
 

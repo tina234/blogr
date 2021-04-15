@@ -3,21 +3,28 @@
     border-top-right-radius: 150px;
 
     .footer-box {
-        /*max-width: 1200px;
-        width: 100%;*/
+        max-width: 1440px;
+        width: 100%;
         margin: 0 auto;
-        padding: 100px 50px;
         display: flex;
         justify-content: space-between;
+        flex-wrap: wrap;
 
         h2 {
-            padding: 0 20px;
+            display: flex;
+            flex-direction: column;
+            flex-basis: 200px;
+            flex-grow: 1;
             margin: 0px;
             color: #fff;
             font-size: 40px;
         }
 
         > div {
+            display: flex;
+            flex-direction: column;
+            flex-basis: 200px;
+            flex-grow: 1;
 
             h3 {
                 color: #fff;
@@ -25,8 +32,37 @@
 
             p {
                 color: #b3b3b3;
-     
+                cursor: pointer;
+                transition: all 0.2s;
+
+                &:hover {
+                    color: #fff;
+                    font-weight: bold;
+                }
             }
+        }
+    }
+}
+
+@media only screen and (min-width: 400px) {
+    .footer-box {
+        padding: 100px 50px;
+        text-align: start;
+    }
+}
+
+
+@media only screen and (max-width: 399px) {
+    .footer-box {
+        padding: 50px 10px;
+        text-align: center;
+
+        h2 {
+            padding-bottom: 30px;
+        }
+
+        > div {
+            padding-bottom: 30px;
         }
     }
 }

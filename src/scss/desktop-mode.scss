@@ -63,3 +63,14 @@ $Dark-blue: hsl(208, 49%, 24%);
     }
 }
 
+@media only screen and (max-width: 500px) {
+    .desk-mode-cont {
+        margin: 60px 0 100px 0;
+
+        .desk-text-box {
+            margin-top: 0;
+        }
+    }
+}
+
+
