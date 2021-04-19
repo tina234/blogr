@@ -24,6 +24,8 @@ import Footer from "@/components/Footer.vue";
 		data() {
 			return {
 				isMobile : false,
+        		showMobileMenu: false
+    
 			}
 		},
 		components: {
