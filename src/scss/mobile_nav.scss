@@ -1,3 +1,4 @@
+
 .mobile-navbar {
     position: absolute;
     top: 25px;
@@ -35,23 +36,23 @@
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
+        transition: width 0.3s;
 
-        &::before {
+        &::before, &::after {
             content: "";
-            width: 100%;
-            bottom: -8px;
+            width: 30px;
             position: absolute;
             height: 100%;
             background-color: #fff;
+            transition: transform 0.3s;
+        }
+
+        &::before {
+            bottom: -8px;
         }
 
         &::after {
-            content: "";
-            width: 100%;
             top: -8px;
-            position: absolute;
-            height: 100%;
-            background-color: #fff;
         }
     }
 
@@ -59,17 +60,61 @@
         position: absolute;
         top: 56px;
         right: -30px;
-        background-color: #ff4d4d;
-        width: 230px;
+        background-color: black;
+        opacity: 0.9;
+        width: 240px;
+        border-radius: 7px;
+        transform: translateX(120%);
+        transition: transform 0.5s cubic-bezier(0.18, 0.89, 0.32, 1.28);
 
-        ul {
+
+        .mainlist {
             list-style: none;
 
             p {
-                line-height: 40px;
                 color: #fff;
                 font-size: 18px;
+                margin: 0;
+                margin-top: 15px;
+            }
+        }
+
+        .sublist {
+            color: #fff;
+            list-style: none;
+            line-height: 35px;
+            height: 0;
+            overflow: hidden;
+            transition: height 0.5s;
+
+            li {
+                opacity: 0;
+                transition: opacity 0.3s ease-in;
             }
         }
     }    
+}
+
+.active-sidebar {
+    .hamb-menu {
+        width: 0;
+
+        &::before, &::after {
+            transform-origin: top left;
+            top: 50%;
+            left: 50%;
+        }
+
+        &::before {
+            transform: rotate(45deg) translate(-50%,-50%);
+        }
+
+        &::after {
+            transform: rotate(-45deg) translate(-50%,-50%);
+        }
+    }
+
+    .sidebar {
+        transform: translateX(0%);
+    }
 }

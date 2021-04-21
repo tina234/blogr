@@ -43,7 +43,6 @@ import Footer from "@/components/Footer.vue";
 		},
 		methods: {
 			onWindowResize(){
-				console.log(window);
 				if(window.innerWidth < 900){
 					this.isMobile = true;
 				}else {
