@@ -1,7 +1,7 @@
 <template>
 	<div>
 		<Navbar v-if="isMobile === false"/>
-		<MobileNav v-if="isMobile === true"/>
+		<MobileNav2 v-if="isMobile === true"/>
 		<Header/>
 		<Introduction/>
 		<State/>
@@ -14,6 +14,7 @@
 <script>
 import Navbar from "@/components/Navbar.vue";
 import MobileNav from "@/components/MobileNav.vue";
+import MobileNav2 from "@/components/MobileNav2.vue";
 import Header from "@/components/Header.vue";
 import Introduction from "@/components/Introduction.vue";
 import State from "@/components/State.vue";
@@ -30,6 +31,7 @@ import Footer from "@/components/Footer.vue";
 		},
 		components: {
 			MobileNav,
+			MobileNav2,
 			Navbar,
 			Header,
 			Introduction,

@@ -3,12 +3,12 @@
         <div class="mobile-navbar">
             <h2>Blogr</h2>
         </div>
-        <div class="menu-box" @click="openSidebar" :class="{ 'active-sidebar' : active_sidebar }"> 
+         <div class="menu-box" @click="openSidebar" :class="{ 'active-sidebar' : active_sidebar }">
             <div class="hamb-menu"></div>
-            <div class="sidebar" @click.stop>
+            <div class="sidebar" @click.stop :style="{ height : height+'px' }">
                 <ul class="mainlist">
                     <li>
-                       <p @click="activeSublist($event)">Product</p> 
+                        <p>Product</p> 
                         <ul class="sublist">
                             <li>Overview</li>
                             <li>Pricing</li>
@@ -19,7 +19,7 @@
                     </li>
 
                     <li>
-                       <p @click="activeSublist($event)">Company</p> 
+                        <p>Company</p> 
                         <ul class="sublist">
                             <li>About</li>
                             <li>Team</li>
@@ -29,7 +29,7 @@
                     </li>
 
                     <li>
-                       <p @click="activeSublist($event)">Connect</p>
+                        <p>Connect</p>
                         <ul class="sublist"> 
                             <li>contakt</li>
                             <li>Newsletter</li>
@@ -39,7 +39,7 @@
                 </ul>
             </div>
         </div>
-    </div>
+    </div>    
 </template>
 
 <script>
@@ -47,38 +47,31 @@ export default {
     data() {
         return {
             active_sidebar: false,
+            height: 0,
         }
     },
+
     methods: {
         openSidebar(){
-            if(this.active_sidebar === false){
+            let mainlist = document.getElementsByClassName('mainlist')[0];
+
+            if(this.active_sidebar === false) {
                 this.active_sidebar = true;
+                this.height = mainlist.offsetHeight;
             }else {
                 this.active_sidebar = false;
-            }
-        },
-
-        activeSublist(event){
-            let submeni = event.target.nextSibling;
-            let height = 0;
-            let current_height = submeni.offsetHeight;
-            let delay = 100;
-            let all = document.getElementsByClassName("sublist");
-            for (let i = 0; i < all.length; i++) {
-                all[i].style.height = height;
+                this.height = 0;
             }
 
-            if(current_height < 1){
-                submeni.childNodes.forEach(element => {
-                    height += element.offsetHeight;
-                    setTimeout(() => {
-                       element.style.opacity = 1;
-                    }, delay += 150);
-                });
-            }
+            
 
-            submeni.style.height = height + 'px';
 
+            //RIJEŠENJE BROJ 2
+            //let height = 0;
+            //dohvati sidebar preko klase, pošto je jedan jedini sidebar onda stavljamo [0] jer nam dohvacanje preko klase vraća array jer očekuje da će biti više elemenata[]
+            //let sidebar = document.getElementsByClassName('sidebar')[0];
+            //dodaj stil height na upravno dohvaćeni sidebar
+            //sidebar.style.height = height + 'px';
         }
     },
 }
