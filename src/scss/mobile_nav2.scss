@@ -1,3 +1,6 @@
+$light-red: hsl(356, 100%, 66%);
+
+
 .mobile-navbar {
     position: absolute;
     top: 25px;
@@ -73,10 +76,16 @@
             padding: 10px 30px;
             box-sizing: border-box;
 
-            p {
-                color: #fff;
-                font-size: 18px;
-                margin: 10px 0;
+            >li {
+                opacity: 0;
+                transform: translateY(120%);
+                transition: opacity 0.3s ease-in, transform 0.3s;
+
+                p {
+                    color: #fff;
+                    font-size: 18px;
+                    margin: 10px 0;
+                }
             }
         }
 
@@ -89,8 +98,14 @@
             transition: height 0.5s;
 
             li {
-                opacity: 0;
-                transition: opacity 0.3s ease-in;
+                transition: all 0.3s;
+                cursor: pointer;
+
+                &:hover {
+                    color: $light-red;
+                    border-left: 1px solid #fff;
+                    padding-left: 8px;
+                }
             }
         }
     }
@@ -113,9 +128,5 @@
         &::after {
             transform: rotate(-45deg) translate(-50%,-50%);
         }
-    }
-
-    .sidebar {
-        
     }
 }
